@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulaire de Besoins - Site Internet</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <div class="form-header">
+            <h1>Formulaire de Besoins</h1>
+            <p class="subtitle">Aidez-nous à mieux comprendre votre projet de site internet</p>
+        </div>
+
+        <form id="clientForm" class="form-container">
+            <!-- Informations de contact -->
+            <section class="form-section">
+                <h2>Informations de Contact</h2>
+                
+                <div class="form-group">
+                    <label for="clientName">Nom complet *</label>
+                    <input type="text" id="clientName" name="clientName" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="email">Email *</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="phone">Téléphone *</label>
+                    <input type="tel" id="phone" name="phone" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="company">Nom de l'entreprise / Organisation</label>
+                    <input type="text" id="company" name="company">
+                </div>
+            </section>
+
+            <!-- Informations sur le site -->
+            <section class="form-section">
+                <h2>Informations</h2>
+                
+                <div class="form-group">
+                    <label for="siteName">Nom du site *</label>
+                    <input type="text" id="siteName" name="siteName" required placeholder="Ex: MonEntreprise.fr">
+                </div>
+
+                <div class="form-group">
+                    <label for="businessDescription">Descriptif détaillé du business *</label>
+                    <textarea id="businessDescription" name="businessDescription" rows="5" required placeholder="Décrivez votre activité, vos produits/services, votre positionnement..."></textarea>
+                </div>
+
+                <div class="form-group">
+                    <label for="targetAudience">Public cible *</label>
+                    <textarea id="targetAudience" name="targetAudience" rows="3" required placeholder="Qui sont vos clients ? (âge, profession, centres d'intérêt...)"></textarea>
+                </div>
+
+                <div class="form-group">
+                    <label for="siteType">Type de site *</label>
+                    <select id="siteType" name="siteType" required>
+                        <option value="">Sélectionnez un type</option>
+                        <option value="vitrine">Site vitrine</option>
+                        <option value="ecommerce">E-commerce / Boutique en ligne</option>
+                        <option value="blog">Blog / Magazine</option>
+                        <option value="portfolio">Portfolio</option>
+                        <option value="corporate">Site corporate</option>
+                        <option value="association">Site associatif</option>
+                        <option value="autre">Autre</option>
+                    </select>
+                </div>
+            </section>
+
+            <!-- Design et Identité Visuelle -->
+            <section class="form-section">
+                <h2>Design et Identité Visuelle</h2>
+                
+                <div class="form-group">
+                    <label for="dominantColors">Couleurs dominantes *</label>
+                    <input type="text" id="dominantColors" name="dominantColors" required placeholder="Ex: Bleu marine, Blanc, Orange">
+                </div>
+
+                <div class="form-group">
+                    <label for="stylePreference">Style souhaité *</label>
+                    <select id="stylePreference" name="stylePreference" required>
+                        <option value="">Sélectionnez un style</option>
+                        <option value="moderne">Moderne et épuré</option>
+                        <option value="classique">Classique et élégant</option>
+                        <option value="minimaliste">Minimaliste</option>
+                        <option value="créatif">Créatif et original</option>
+                        <option value="professionnel">Professionnel et corporate</option>
+                        <option value="dynamique">Dynamique et coloré</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="logo">Avez-vous déjà un logo ?</label>
+                    <select id="logo" name="logo">
+                        <option value="oui">Oui, j'ai un logo</option>
+                        <option value="non">Non, j'ai besoin d'un logo</option>
+                        <option value="refonte">Oui, mais je veux le refaire</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="referenceSites">Sites de référence (URLs)</label>
+                    <textarea id="referenceSites" name="referenceSites" rows="3" placeholder="Listez des sites que vous aimez (un par ligne)"></textarea>
+                </div>
+            </section>
+
+            <!-- Structure du Site -->
+            <section class="form-section">
+                <h2>Structure du Site</h2>
+                
+                <div class="form-group">
+                    <label for="pageCount">Nombre de pages estimé *</label>
+                    <input type="number" id="pageCount" name="pageCount" min="1" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="pageTitles">Intitulés des pages *</label>
+                    <textarea id="pageTitles" name="pageTitles" rows="5" required placeholder="Listez toutes les pages souhaitées (une par ligne)&#10;Ex:&#10;Accueil&#10;À propos&#10;Services&#10;Portfolio&#10;Contact"></textarea>
+                </div>
+
+                <div class="form-group">
+                    <label for="specialFeatures">Fonctionnalités spéciales souhaitées</label>
+                    <textarea id="specialFeatures" name="specialFeatures" rows="4" placeholder="Ex: Formulaire de contact, Chat en direct, Réservation en ligne, Blog, Galerie photos, etc."></textarea>
+                </div>
+
+                <div class="form-group">
+                    <label for="cms">Souhaitez-vous pouvoir modifier le contenu vous-même ?</label>
+                    <select id="cms" name="cms">
+                        <option value="oui">Oui</option>
+                        <option value="non">Non, je préfère que vous le fassiez</option>
+                        <option value="peut-etre">Peut-être plus tard</option>
+                    </select>
+                </div>
+            </section>
+
+            <!-- Contenu et Ressources -->
+            <section class="form-section">
+                <h2>Contenu et Ressources</h2>
+                
+                <div class="form-group">
+                    <label for="contentStatus">État du contenu</label>
+                    <select id="contentStatus" name="contentStatus">
+                        <option value="pret">J'ai tout le contenu prêt</option>
+                        <option value="partiel">J'ai une partie du contenu</option>
+                        <option value="aide">J'ai besoin d'aide pour créer le contenu</option>
+                        <option value="vide">Je n'ai pas encore de contenu</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="images">Avez-vous des images/photos à utiliser ?</label>
+                    <select id="images" name="images">
+                        <option value="oui">Oui, j'ai mes propres images</option>
+                        <option value="partiel">Oui, mais j'aurai besoin d'images supplémentaires</option>
+                        <option value="non">Non, j'ai besoin d'images</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="domain">Avez-vous déjà un nom de domaine ?</label>
+                    <select id="domain" name="domain">
+                        <option value="oui">Oui, j'ai déjà un domaine</option>
+                        <option value="non">Non, je dois en acheter un</option>
+                        <option value="ne-sait-pas">Je ne sais pas</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="hosting">Avez-vous un hébergement ?</label>
+                    <select id="hosting" name="hosting">
+                        <option value="oui">Oui, j'ai déjà un hébergement</option>
+                        <option value="non">Non, j'ai besoin d'un hébergement</option>
+                        <option value="ne-sait-pas">Je ne sais pas</option>
+                    </select>
+                </div>
+            </section>
+
+            <!-- Délais et Budget -->
+            <section class="form-section">
+                <h2>Délais et Budget</h2>
+                
+                <div class="form-group">
+                    <label for="deadline">Date de mise en ligne souhaitée</label>
+                    <input type="date" id="deadline" name="deadline">
+                </div>
+
+                <div class="form-group">
+                    <label for="budget">Budget estimé (optionnel)</label>
+                    <select id="budget" name="budget">
+                        <option value="">Préférez ne pas répondre</option>
+                        <option value="moins-1000">Moins de 1000€</option>
+                        <option value="1000-3000">1000€ - 3000€</option>
+                        <option value="3000-5000">3000€ - 5000€</option>
+                        <option value="5000-10000">5000€ - 10000€</option>
+                        <option value="plus-10000">Plus de 10000€</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="additionalInfo">Informations complémentaires</label>
+                    <textarea id="additionalInfo" name="additionalInfo" rows="4" placeholder="Tout autre élément que vous souhaitez nous communiquer..."></textarea>
+                </div>
+            </section>
+
+            <div class="form-actions">
+                <button type="submit" class="btn-submit">Envoyer le formulaire</button>
+            </div>
+        </form>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
+
