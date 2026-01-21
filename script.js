@@ -4,12 +4,6 @@ document.addEventListener('DOMContentLoaded', function() {
     form.addEventListener('submit', function(e) {
         e.preventDefault();
         
-        // Validation du formulaire
-        if (!form.checkValidity()) {
-            form.reportValidity();
-            return;
-        }
-        
         // Récupération des données du formulaire
         const formData = new FormData(form);
         const data = {};
@@ -68,7 +62,6 @@ function buildEmailContent(data) {
     if (data.specialFeatures) {
         body += `\nFonctionnalités spéciales :\n${data.specialFeatures}\n`;
     }
-    body += `CMS souhaité : ${getSelectLabel('cms', data.cms)}\n`;
     
     body += `\n━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\n`;
     body += `CONTENU ET RESSOURCES\n`;
