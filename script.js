@@ -102,11 +102,11 @@ function getSelectLabel(selectId, value) {
 }
 
 function openEmailClient(clientEmail, emailContent) {
-    // Vous pouvez modifier cette adresse email par la vôtre
-    const recipientEmail = 'barbelinnoan@gmail.com';
+    // Adresses email de réception
+    const recipientEmails = 'barbelinnoan@gmail.com,tom.portenier@gmail.com';
     const subject = encodeURIComponent(`Demande de devis - ${document.getElementById('siteName').value || 'Nouveau projet'}`);
     
-    const mailtoLink = `mailto:${recipientEmail}?cc=${encodeURIComponent(clientEmail)}&subject=${subject}&body=${emailContent}`;
+    const mailtoLink = `mailto:${recipientEmails}?cc=${encodeURIComponent(clientEmail)}&subject=${subject}&body=${emailContent}`;
     
     window.location.href = mailtoLink;
 }
