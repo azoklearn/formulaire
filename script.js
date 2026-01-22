@@ -79,7 +79,7 @@ function buildEmailContent(data) {
         body += `Date de mise en ligne souhaitée : ${deadlineDate.toLocaleDateString('fr-FR')}\n`;
     }
     if (data.budget) {
-        body += `Budget estimé : ${getSelectLabel('budget', data.budget)}\n`;
+        body += `Budget estimé : ${data.budget}€\n`;
     }
     if (data.additionalInfo) {
         body += `\nInformations complémentaires :\n${data.additionalInfo}\n`;
@@ -148,11 +148,12 @@ style.textContent = `
         position: fixed;
         top: 20px;
         right: 20px;
-        background: linear-gradient(135deg, #51cf66 0%, #40c057 100%);
-        color: white;
-        padding: 20px 30px;
-        border-radius: 10px;
-        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+        background: #000000;
+        color: #ffffff;
+        padding: 24px 32px;
+        border-radius: 4px;
+        box-shadow: 0 8px 24px rgba(0, 0, 0, 0.5), 0 0 0 1px rgba(255, 255, 255, 0.1);
+        border: 2px solid #000000;
         z-index: 10000;
         opacity: 0;
         transform: translateY(-20px);
